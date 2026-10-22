@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 70" width="100%" height="100%">
+  <defs>
+    <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE043"/>
+      <stop offset="50%" stop-color="#F5B800"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E242C"/>
+      <stop offset="100%" stop-color="#0F1216"/>
+    </linearGradient>
+    <filter id="glowYellow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Icon / Symbol Group -->
+  <g transform="translate(4, 5)">
+    <!-- Hexagonal / Shield Base -->
+    <polygon points="30,2 54,14 54,46 30,58 6,46 6,14" fill="url(#shieldGrad)" stroke="#333D4B" stroke-width="2"/>
+    <polygon points="30,6 50,16 50,44 30,54 10,44 10,16" fill="none" stroke="url(#yellowGrad)" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- Cylinder Silhouette -->
+    <!-- Valve on top -->
+    <rect x="27" y="12" width="6" height="4" rx="1" fill="url(#metalGrad)"/>
+    <rect x="25" y="16" width="10" height="2" rx="1" fill="#F5B800"/>
+    <!-- Cylinder Body -->
+    <rect x="22" y="19" width="16" height="26" rx="5" fill="url(#metalGrad)"/>
+    
+    <!-- Pressure gauge circle inside cylinder -->
+    <circle cx="30" cy="30" r="5" fill="#0F1216" stroke="url(#yellowGrad)" stroke-width="1.2"/>
+    <!-- Gauge needle pointing to safety zone -->
+    <line x1="30" y1="30" x2="33" y2="28" stroke="#F5B800" stroke-width="1.2" stroke-linecap="round"/>
+    
+    <!-- Dynamic Speed/Precision Chevrons on Right -->
+    <path d="M41 23 L46 30 L41 37" fill="none" stroke="url(#yellowGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M47 25 L51 30 L47 35" fill="none" stroke="url(#yellowGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(72, 12)">
+    <!-- "REAL" Text -->
+    <text x="0" y="27" font-family="'Montserrat', 'Oswald', 'Inter', 'Segoe UI', sans-serif" font-size="28" font-weight="900" letter-spacing="1.5" fill="url(#metalGrad)">
+      REAL
+    </text>
+    
+    <!-- "TESTE" Text -->
+    <text x="86" y="27" font-family="'Montserrat', 'Oswald', 'Inter', 'Segoe UI', sans-serif" font-size="28" font-weight="900" letter-spacing="1.5" fill="url(#metalGrad)">
+      TESTE
+    </text>
+
+    <!-- "GNV" Badge in Automotive Yellow -->
+    <g transform="translate(196, 6)">
+      <rect x="0" y="0" width="76" height="28" rx="4" fill="url(#yellowGrad)" filter="url(#glowYellow)"/>
+      <polygon points="0,0 8,0 0,28" fill="#FFFFFF" opacity="0.25"/>
+      <text x="38" y="20" font-family="'Montserrat', 'Oswald', 'Inter', 'Segoe UI', sans-serif" font-size="20" font-weight="900" letter-spacing="2" fill="#0F1216" text-anchor="middle">
+        GNV
+      </text>
+    </g>
+
+    <!-- Subtitle / Tagline -->
+    <text x="2" y="45" font-family="'Inter', 'Segoe UI', sans-serif" font-size="9.5" font-weight="600" letter-spacing="3.2" fill="#94A3B8">
+      RETESTE &amp; INSPEÇÃO DE CILINDROS
+    </text>
+    
+    <!-- Mini Homologado Inmetro Tag -->
+    <g transform="translate(216, 38)">
+      <circle cx="4" cy="4" r="3" fill="#10B981"/>
+      <text x="11" y="7" font-family="'Inter', sans-serif" font-size="8" font-weight="700" letter-spacing="1" fill="#10B981">
+        HOMOLOGADO
+      </text>
+    </g>
+  </g>
+</svg>
