@@ -1,3 +1,5 @@
 temp_chrome_profile/
+temp_chrome_screenshot/
+*.jpg
 .DS_Store
 Thumbs.db

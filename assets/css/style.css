@@ -497,8 +497,9 @@ button {
   background-color: #0B0E13;
   color: var(--color-primary);
   font-weight: 800;
-  border: 1px solid rgba(245, 184, 0, 0.3);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(245, 184, 0, 0.35);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  border-radius: 14px;
 }
 
 .btn-white:hover {
@@ -1218,26 +1219,53 @@ button {
   position: relative;
   z-index: 2;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
+  justify-content: center;
+  text-align: center;
+  gap: 26px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.cta-banner-content {
+  text-align: center;
 }
 
 .cta-banner-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
   font-weight: 900;
   color: #0B0E13;
-  line-height: 1.2;
-  max-width: 680px;
+  line-height: 1.25;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .cta-banner-subtitle {
   color: #1E293B;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 600;
-  margin-top: 8px;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.cta-banner-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.cta-banner-wrapper .btn {
+  border-radius: 14px;
+  padding: 16px 36px;
+  font-size: 1rem;
 }
 
 /* ===================================================================
