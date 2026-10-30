@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </p>
           <a href="https://wa.me/${COMPANY_PHONE}?text=${encodeURIComponent(`Olá! Fiz a simulação no site da Real Teste GNV. Meu cilindro de ${capacity} teve o último reteste em ${lastYear} (venceu em ${expirationYear}) e preciso fazer o reteste urgente. Qual o valor e disponibilidade?`)}" 
              target="_blank" class="btn btn-primary btn-sm" style="width: 100%;">
-            Agendar Reteste Urgente no WhatsApp
+            Agendar no WhatsApp
           </a>
         `;
       } else if (isDueSoon) {
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </p>
           <a href="https://wa.me/${COMPANY_PHONE}?text=${encodeURIComponent(`Olá! Meu cilindro GNV de ${capacity} vence o reteste em ${expirationYear}. Gostaria de consultar orçamento e agendar na Real Teste GNV.`)}" 
              target="_blank" class="btn btn-primary btn-sm" style="width: 100%;">
-            Consultar Valor do Reteste
+            Consultar Valor
           </a>
         `;
       } else {
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </p>
           <a href="https://wa.me/${COMPANY_PHONE}?text=${encodeURIComponent(`Olá Real Teste GNV! Meu cilindro vence em ${expirationYear}, mas tenho dúvidas sobre inspeção e manutenção de válvulas.`)}" 
              target="_blank" class="btn btn-secondary btn-sm" style="width: 100%;">
-            Tirar Dúvidas com Técnico
+            Tirar Dúvidas
           </a>
         `;
       }
@@ -183,65 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. FILTRO DA GALERIA
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const galleryItems = document.querySelectorAll('.gallery-item');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filterValue = btn.getAttribute('data-filter');
-
-      galleryItems.forEach(item => {
-        const itemCategory = item.getAttribute('data-category');
-        if (filterValue === 'all' || itemCategory === filterValue) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  // 7. LIGHTBOX MODAL PARA GALERIA
-  const lightboxModal = document.getElementById('lightbox-modal');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxClose = document.querySelector('.lightbox-close');
-
-  if (lightboxModal && lightboxImg) {
-    galleryItems.forEach(item => {
-      item.addEventListener('click', () => {
-        const img = item.querySelector('img');
-        if (img) {
-          lightboxImg.src = img.src;
-          lightboxImg.alt = img.alt || 'Foto da Oficina Real Teste GNV';
-          lightboxModal.classList.add('active');
-          document.body.classList.add('modal-open');
-        }
-      });
-    });
-
-    const closeLightbox = () => {
-      lightboxModal.classList.remove('active');
-      document.body.classList.remove('modal-open');
-    };
-
-    if (lightboxClose) {
-      lightboxClose.addEventListener('click', closeLightbox);
-    }
-
-    lightboxModal.addEventListener('click', (e) => {
-      if (e.target === lightboxModal) closeLightbox();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightbox();
-    });
-  }
-
-  // 8. ANIMAÇÃO DE CONTADORES NUMÉRICOS
+  // 6. ANIMAÇÃO DE CONTADORES NUMÉRICOS
   const statNumbers = document.querySelectorAll('.counter-val');
   let animated = false;
 
@@ -276,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', animateCounters, { passive: true });
   animateCounters();
 
-  // 9. FAQ ACCORDION INTERATIVO
+  // 7. FAQ ACCORDION INTERATIVO
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
@@ -292,4 +234,80 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  // 8. CARROSSEL DE DEPOIMENTOS MOBILE
+  const testimonialsTrack = document.getElementById('testimonials-track');
+  const prevBtn = document.getElementById('testimonials-prev');
+  const nextBtn = document.getElementById('testimonials-next');
+  const dotsContainer = document.getElementById('testimonials-dots');
+
+  if (testimonialsTrack) {
+    const cards = testimonialsTrack.querySelectorAll('.testimonial-card');
+
+    // Gera os indicadores de bolinha (dots)
+    if (dotsContainer) {
+      dotsContainer.innerHTML = '';
+      cards.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.className = `carousel-dot${idx === 0 ? ' active' : ''}`;
+        dot.setAttribute('aria-label', `Ir para depoimento ${idx + 1}`);
+        dot.addEventListener('click', () => {
+          scrollToCard(idx);
+        });
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    const getCardStep = () => {
+      const card = testimonialsTrack.querySelector('.testimonial-card');
+      if (!card) return testimonialsTrack.clientWidth;
+      const gap = parseFloat(window.getComputedStyle(testimonialsTrack).gap) || 16;
+      return card.offsetWidth + gap;
+    };
+
+    const scrollToCard = (index) => {
+      const step = getCardStep();
+      testimonialsTrack.scrollTo({
+        left: index * step,
+        behavior: 'smooth'
+      });
+      updateActiveDot(index);
+    };
+
+    const updateActiveDot = (activeIndex) => {
+      if (!dotsContainer) return;
+      const dots = dotsContainer.querySelectorAll('.carousel-dot');
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === activeIndex);
+      });
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        const step = getCardStep();
+        testimonialsTrack.scrollBy({ left: -step, behavior: 'smooth' });
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        const step = getCardStep();
+        testimonialsTrack.scrollBy({ left: step, behavior: 'smooth' });
+      });
+    }
+
+    // Sincroniza a bolinha ativa com o swipe por toque
+    let isScrolling;
+    testimonialsTrack.addEventListener('scroll', () => {
+      clearTimeout(isScrolling);
+      isScrolling = setTimeout(() => {
+        const step = getCardStep();
+        if (step > 0) {
+          const index = Math.round(testimonialsTrack.scrollLeft / step);
+          const clamped = Math.max(0, Math.min(cards.length - 1, index));
+          updateActiveDot(clamped);
+        }
+      }, 40);
+    }, { passive: true });
+  }
 });

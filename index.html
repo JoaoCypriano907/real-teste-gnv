@@ -106,14 +106,12 @@
         </a>
 
         <!-- Links de Navegação -->
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="nav-menu">
           <li><a href="#inicio" class="nav-link active">Início</a></li>
           <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
           <li><a href="#servicos" class="nav-link">Serviços</a></li>
           <li><a href="#como-funciona" class="nav-link">Como Funciona</a></li>
-          <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
           <li><a href="#calculadora" class="nav-link">Calculadora</a></li>
-          <li><a href="#galeria" class="nav-link">Galeria</a></li>
           <li><a href="#faq" class="nav-link">Dúvidas</a></li>
           <li><a href="#localizacao" class="nav-link">Localização</a></li>
           <li><a href="#contato" class="nav-link">Contato</a></li>
@@ -539,79 +537,6 @@
   </section>
 
   <!-- ===================================================================
-       DIFERENCIAIS & TECNOLOGIA (Seção escura industrial como na referência)
-       =================================================================== -->
-  <section class="differentials-section" id="diferenciais">
-    <div class="container">
-      <div class="differentials-grid">
-        <div class="diff-content">
-          <span class="section-eyebrow">Por Que Nos Escolher</span>
-          <h2 class="section-title dark">
-            Tecnologia Avançada, Calibração Certificada e Máxima Confiança
-          </h2>
-          <p class="section-subtitle dark">
-            O reteste de GNV é um procedimento sério que envolve vasos sob altíssima pressão. Na Real Teste GNV você tem a certeza de um laudo legítimo e de um serviço feito por quem realmente entende do assunto.
-          </p>
-
-          <div class="diff-items-list">
-            <!-- Diferencial 1 -->
-            <div class="diff-item">
-              <div class="diff-item-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 12 2 2 4-4"/></svg>
-              </div>
-              <div class="diff-item-text">
-                <h4>Equipamentos Aferidos pelo Inmetro</h4>
-                <p>Nossos manômetros analógicos e transdutores digitais de pressão passam por calibração periódica rastreada pela RBC (Rede Brasileira de Calibração).</p>
-              </div>
-            </div>
-
-            <!-- Diferencial 2 -->
-            <div class="diff-item">
-              <div class="diff-item-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-              </div>
-              <div class="diff-item-text">
-                <h4>Agilidade que Respeita o seu Trabalho</h4>
-                <p>Sabemos que motoristas de aplicativo e taxistas não podem ficar sem rodar. Com horário agendado, realizamos o serviço com eficiência para você voltar às ruas rapidamente.</p>
-              </div>
-            </div>
-
-            <!-- Diferencial 3 -->
-            <div class="diff-item">
-              <div class="diff-item-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <div class="diff-item-text">
-                <h4>100% de Aprovação na Vistoria Anual</h4>
-                <p>Com o reteste e o laudo da Real Teste GNV em mãos, seu veículo estará completamente regularizado perante o Detran e as regras de segurança dos postos de abastecimento.</p>
-              </div>
-            </div>
-          </div>
-
-          <a href="https://wa.me/552133366624?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meu%20atendimento%20na%20Real%20Teste%20GNV." target="_blank" class="btn btn-primary">
-            Agendar Horário na Oficina
-          </a>
-        </div>
-
-        <!-- Mosaico de fotos industriais estilo referência -->
-        <div class="diff-photo-mosaic">
-          <div class="mosaic-img-box tall">
-            <img src="assets/images/teste-hidrostatico.jpg" alt="Bancada de teste hidrostático 300 bar da Real Teste GNV">
-          </div>
-          <div class="mosaic-column-stacked">
-            <div class="mosaic-img-box short">
-              <img src="assets/images/veiculo-porta-malas.jpg" alt="Inspeção de cilindro no veículo sobre o elevador">
-            </div>
-            <div class="mosaic-img-box short">
-              <img src="assets/images/cilindro-selo-inmetro.jpg" alt="Válvula calibrada e selo oficial Inmetro">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================================================================
        BANNER DE DESTAQUE / CTA EM AMARELO AUTOMOTIVO
        =================================================================== -->
   <section class="cta-banner-section">
@@ -642,7 +567,7 @@
       <div class="calculator-card">
         <div style="text-align: center;">
           <span class="section-eyebrow">Simulador Inteligente</span>
-          <h2 class="section-title dark" style="font-size: 2.1rem;">
+          <h2 class="section-title dark">
             Verifique a Validade do Seu Reteste GNV
           </h2>
           <p class="section-subtitle dark" style="margin: 0 auto;">
@@ -674,7 +599,7 @@
               </div>
 
               <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
-                Calcular Validade do Reteste
+                Calcular Validade
               </button>
             </div>
 
@@ -694,86 +619,6 @@
   </section>
 
   <!-- ===================================================================
-       GALERIA DE FOTOS DA OFICINA (6 Fotos Reais da Oficina e Equipamentos)
-       =================================================================== -->
-  <section class="gallery-section" id="galeria">
-    <div class="container">
-      <div style="text-align: center; max-width: 750px; margin: 0 auto;">
-        <span class="section-eyebrow">Conheça Nossa Estrutura</span>
-        <h2 class="section-title light">Fotos Reais da Oficina &amp; Equipamentos</h2>
-        <p class="section-subtitle light" style="margin: 0 auto;">
-          Transparência total: veja de perto nosso ambiente de trabalho, nossa bancada industrial de reteste e os procedimentos realizados em nossa sede em Padre Miguel.
-        </p>
-      </div>
-
-      <!-- Abas de Filtro da Galeria -->
-      <div class="gallery-filter-tabs">
-        <button class="filter-btn active" data-filter="all">Todas as Fotos</button>
-        <button class="filter-btn" data-filter="bancada">Bancada &amp; Testes</button>
-        <button class="filter-btn" data-filter="cilindros">Cilindros &amp; Válvulas</button>
-        <button class="filter-btn" data-filter="oficina">Estrutura &amp; Veículos</button>
-      </div>
-
-      <!-- Grid de Fotos com Lightbox -->
-      <div class="gallery-grid">
-        <!-- Foto 1: Visão Geral da Oficina -->
-        <div class="gallery-item" data-category="oficina">
-          <img src="assets/images/hero-workshop.jpg" alt="Visão geral da oficina Real Teste GNV com técnicos e cilindros">
-          <div class="gallery-item-overlay">
-            <span class="gallery-caption-cat">Oficina</span>
-            <h4 class="gallery-caption-title">Oficina Homologada Real Teste GNV</h4>
-          </div>
-        </div>
-
-        <!-- Foto 2: Inspeção do Cilindro -->
-        <div class="gallery-item" data-category="cilindros">
-          <img src="assets/images/about-technician.jpg" alt="Técnico realizando inspeção e medição com paquímetro digital">
-          <div class="gallery-item-overlay">
-            <span class="gallery-caption-cat">Cilindros</span>
-            <h4 class="gallery-caption-title">Inspeção Detalhada e Medição Ultrassônica</h4>
-          </div>
-        </div>
-
-        <!-- Foto 3: Bancada de Teste Hidrostático -->
-        <div class="gallery-item" data-category="bancada">
-          <img src="assets/images/teste-hidrostatico.jpg" alt="Bancada técnica de teste hidrostático a 300 bar">
-          <div class="gallery-item-overlay">
-            <span class="gallery-caption-cat">Bancada &amp; Testes</span>
-            <h4 class="gallery-caption-title">Pressurização Hidrostática a 300 Bar</h4>
-          </div>
-        </div>
-
-        <!-- Foto 4: Carro no elevador e cilindro no porta-malas -->
-        <div class="gallery-item" data-category="oficina">
-          <img src="assets/images/veiculo-porta-malas.jpg" alt="Inspeção veicular de cilindro GNV no porta-malas sobre elevador">
-          <div class="gallery-item-overlay">
-            <span class="gallery-caption-cat">Estrutura &amp; Veículos</span>
-            <h4 class="gallery-caption-title">Instalação e Desmontagem Segura</h4>
-          </div>
-        </div>
-
-        <!-- Foto 5: Válvula de Latão e Selo Inmetro -->
-        <div class="gallery-item" data-category="cilindros">
-          <img src="assets/images/cilindro-selo-inmetro.jpg" alt="Selo oficial Inmetro e válvula de cilindro GNV calibrada">
-          <div class="gallery-item-overlay">
-            <span class="gallery-caption-cat">Cilindros &amp; Válvulas</span>
-            <h4 class="gallery-caption-title">Selo Homologado Inmetro &amp; Válvula</h4>
-          </div>
-        </div>
-
-        <!-- Foto 6: Recepção e Atendimento ao Cliente -->
-        <div class="gallery-item" data-category="oficina">
-          <img src="assets/images/atendimento-recepcao.jpg" alt="Recepção acolhedora e entrega do laudo técnico oficial">
-          <div class="gallery-item-overlay">
-            <span class="gallery-caption-cat">Atendimento</span>
-            <h4 class="gallery-caption-title">Recepção &amp; Entrega do Laudo Imediato</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================================================================
        DEPOIMENTOS DE CLIENTES (Avaliações 5 Estrelas)
        =================================================================== -->
   <section class="testimonials-section">
@@ -786,59 +631,128 @@
         </p>
       </div>
 
-      <div class="testimonials-grid">
-        <!-- Depoimento 1 -->
-        <div class="testimonial-card">
-          <div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">
-              "Trabalho na Uber e não posso perder dia de corrida. Agendei na Real Teste GNV pela manhã e no início da tarde o cilindro já estava testado, com o selo do Inmetro e laudo na mão. Serviço rápido e preço justo!"
-            </p>
+      <div class="testimonials-wrapper">
+        <div class="testimonials-grid" id="testimonials-track">
+          <!-- Depoimento 1 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Trabalho na Uber e não posso perder dia de corrida. Agendei na Real Teste GNV pela manhã e no início da tarde o cilindro já estava testado, com o selo do Inmetro e laudo na mão. Serviço rápido e preço justo!"
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">MR</div>
+              <div class="author-info">
+                <h4>Marcelo Ramos</h4>
+                <p>Motorista de Aplicativo • Voyage 1.6 GNV</p>
+                <span class="author-badge">✔ Cliente Verificado</span>
+              </div>
+            </div>
           </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">MR</div>
-            <div class="author-info">
-              <h4>Marcelo Ramos</h4>
-              <p>Motorista de Aplicativo • Voyage 1.6 GNV</p>
-              <span class="author-badge">✔ Cliente Verificado</span>
+
+          <!-- Depoimento 2 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Lugar de confiança! Me explicaram todo o teste hidrostático, trocaram o reparo da válvula que estava ressecado e me entregaram o laudo certinho para o Detran. Atendimento nota 10 aqui em Padre Miguel."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">RS</div>
+              <div class="author-info">
+                <h4>Roberto Silva</h4>
+                <p>Taxista • Spin 1.8 com 2 cilindros</p>
+                <span class="author-badge">✔ Cliente Verificado</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 3 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Oficina impecável, bancada industrial de verdade e equipe super transparente. Meu cilindro era de 2019 e já estava vencido, abastecia com medo nos postos. Agora estou rodando 100% legalizado e seguro."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">FA</div>
+              <div class="author-info">
+                <h4>Fernando Albuquerque</h4>
+                <p>Particular • Siena Tetrafuel 15m³</p>
+                <span class="author-badge">✔ Cliente Verificado</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 4 (Novo) -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Primeira vez que precisei fazer o reteste e fui muito bem atendida. A equipe tirou todas as minhas dúvidas sobre a requalificação e entregou o laudo oficial no mesmo dia. Espaço limpo e profissionais de confiança!"
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">JM</div>
+              <div class="author-info">
+                <h4>Juliana Mendes</h4>
+                <p>Particular • Fox 1.6 GNV (7.5 m³)</p>
+                <span class="author-badge">✔ Cliente Verificado</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 5 (Novo) -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Tenho utilitários de entrega e não posso deixar veículo parado. A Real Teste cumpriu o horário agendado à risca, fez o teste a 300 bar e emitiu o laudo na hora. Preço justo para frota e aprovação imediata no Detran."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">CF</div>
+              <div class="author-info">
+                <h4>Carlos Fontes</h4>
+                <p>Frotista • Fiorino 1.4 Hard Working</p>
+                <span class="author-badge">✔ Cliente Verificado</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 6 (Novo) -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Atendimento nota dez em Padre Miguel! Cheguei com o cilindro perto do vencimento, fizeram a revisão completa com teste hidrostático e troca de orings. Já saí de lá direto para o posto abastecer com total tranquilidade."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">AO</div>
+              <div class="author-info">
+                <h4>Anderson Oliveira</h4>
+                <p>Motorista de Aplicativo • Prisma 1.4 Maxx</p>
+                <span class="author-badge">✔ Cliente Verificado</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Depoimento 2 -->
-        <div class="testimonial-card">
-          <div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">
-              "Lugar de confiança! Me explicaram todo o teste hidrostático, trocaram o reparo da válvula que estava ressecado e me entregaram o laudo certinho para o Detran. Atendimento nota 10 aqui em Padre Miguel."
-            </p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">RS</div>
-            <div class="author-info">
-              <h4>Roberto Silva</h4>
-              <p>Taxista • Spin 1.8 com 2 cilindros</p>
-              <span class="author-badge">✔ Cliente Verificado</span>
-            </div>
-          </div>
-        </div>
+        <!-- Controles do Carrossel Mobile -->
+        <div class="testimonials-carousel-controls">
+          <button class="carousel-nav-btn prev" id="testimonials-prev" aria-label="Depoimento anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          
+          <div class="carousel-dots" id="testimonials-dots"></div>
 
-        <!-- Depoimento 3 -->
-        <div class="testimonial-card">
-          <div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">
-              "Oficina impecável, bancada industrial de verdade e equipe super transparente. Meu cilindro era de 2019 e já estava vencido, abastecia com medo nos postos. Agora estou rodando 100% legalizado e seguro."
-            </p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">FA</div>
-            <div class="author-info">
-              <h4>Fernando Albuquerque</h4>
-              <p>Particular • Siena Tetrafuel 15m³</p>
-              <span class="author-badge">✔ Cliente Verificado</span>
-            </div>
-          </div>
+          <button class="carousel-nav-btn next" id="testimonials-next" aria-label="Próximo depoimento">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -1100,7 +1014,6 @@
             <li><a href="#sobre">Sobre a Real Teste</a></li>
             <li><a href="#servicos">Nossos Serviços</a></li>
             <li><a href="#como-funciona">Como Funciona o Reteste</a></li>
-            <li><a href="#diferenciais">Diferenciais Técnicos</a></li>
             <li><a href="#calculadora">Calculadora de Reteste</a></li>
             <li><a href="#faq">Dúvidas Frequentes</a></li>
           </ul>
@@ -1154,16 +1067,6 @@
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.539 1.947.82 2.792.82 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766m0-2.172c4.394 0 7.953 3.559 7.953 7.953 0 4.394-3.559 7.953-7.953 7.953-1.282 0-2.483-.306-3.547-.852l-5.484 1.438 1.464-5.35c-.636-1.119-.986-2.404-.986-3.189 0-4.394 3.559-7.953 7.953-7.953z"/></svg>
     <span>Fale no WhatsApp</span>
   </a>
-
-  <!-- ===================================================================
-       MODAL LIGHTBOX
-       =================================================================== -->
-  <div class="lightbox-modal" id="lightbox-modal">
-    <div class="lightbox-content">
-      <button class="lightbox-close" aria-label="Fechar Foto">&times;</button>
-      <img src="" alt="" id="lightbox-img">
-    </div>
-  </div>
 
   <!-- JavaScript Principal -->
   <script src="assets/js/main.js"></script>
